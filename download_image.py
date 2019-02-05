@@ -17,7 +17,7 @@ def download_file(file_id):
 
     if not creds or creds.invalid:
         print("make new storage data file ")
-        flow = client.flow_from_clientsecrets('client_secret2.json', SCOPES)
+        flow = client.flow_from_clientsecrets('client_secret2.json', SCOPES)  # 서비스 계정 키 저장
         creds = tools.run_flow(flow, store, flags) \
             if flags else tools.run(flow, store)
 
@@ -30,3 +30,7 @@ def download_file(file_id):
     while done is False:
         status, done = downloader.next_chunk()
         print("Download %d%%." % int(status.progress() * 100))
+
+
+
+download_file('15cempaLWNfzLdxZMQo2qSGFiBASR6ZR1')
