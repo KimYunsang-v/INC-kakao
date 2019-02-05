@@ -1,4 +1,4 @@
-from selenium import webdriver
+﻿from selenium import webdriver
 import room_scan
 import time
 from selenium.webdriver.common.keys import Keys
@@ -27,12 +27,12 @@ driver = webdriver.Chrome('C:/chromedriver')
 driver.implicitly_wait(3)
 
 # 평생교육원 채팅방 url 호출
-driver.get('https://center-pf.kakao.com/_EvRij/chats')
+driver.get('***')
 
 # 로그인하기
 # 아이디/패스워드 입력하기
-driver.find_element_by_id('loginEmail').send_keys('skuinc.internship@skuniv.ac.kr')  # 아이디 보안상 삭제함
-driver.find_element_by_id('loginPw').send_keys('!@#$intern12')                       # 비번은 보안상 삭제함
+driver.find_element_by_id('loginEmail').send_keys('***')  # 아이디 보안상 삭제함
+driver.find_element_by_id('loginPw').send_keys('***')                       # 비번은 보안상 삭제함
 
 # 로그인 버튼 클릭하기
 driver.find_element_by_xpath('//*[@id="login-form"]/fieldset/button').click()
